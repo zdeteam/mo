@@ -76,7 +76,7 @@ import { readMessage } from '@/api/user';
 import { formatRelativeTime } from '@/utils/formatTime';
 
 const defaultavatar =
-    'https://assets.paopao.info/public/avatar/default/admin.png';
+    'https://mozde.oss-cn-hangzhou.aliyuncs.com/public/avatar.png?x-oss-process=image/resize,m_fill,w_300,h_300,limit_0/auto-orient,1/format,png';
 
 const router = useRouter();
 const props = withDefaults(
