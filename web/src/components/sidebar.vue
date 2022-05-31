@@ -105,7 +105,7 @@ import {
 } from '@vicons/ionicons5';
 import { Hash } from '@vicons/tabler';
 import { getUnreadMsgCount } from '@/api/user';
-import LOGO from '@/assets/img/logo.png';
+import LOGO from '@/assets/img/logo.svg';
 
 const store = useStore();
 const route = useRoute();
@@ -154,7 +154,7 @@ const menuOptions = computed(() => {
     return store.state.userInfo.id > 0
         ? [
               {
-                  label: '广场',
+                  label: '鱼塘',
                   key: 'home',
                   icon: () => h(HomeOutline),
                   href: '/',
@@ -204,7 +204,7 @@ const menuOptions = computed(() => {
           ]
         : [
               {
-                  label: '广场',
+                  label: '鱼塘',
                   key: 'home',
                   icon: () => h(HomeOutline),
                   href: '/',

@@ -3,11 +3,9 @@
         <main-nav title="提醒" />
 
         <n-list class="main-content-wrap messages-wrap" bordered>
-            <div v-if="loading" class="skeleton-wrap">
-                <message-skeleton :num="pageSize" />
-            </div>
+           
 
-            <div v-else>
+            <div>
                 <div class="empty-wrap" v-if="list.length === 0">
                     <n-empty size="large" description="暂无数据" />
                 </div>

@@ -1,12 +1,5 @@
 <template>
-    <div class="skeleton-item" v-for="i in new Array(num)" :key="i">
-        <div class="user">
-            <n-skeleton circle size="small" />
-        </div>
-        <div class="content">
-            <n-skeleton text :repeat="3" />
-            <n-skeleton text style="width: 60%" />
-        </div>
+    <div class="skeleton-item">
     </div>
 </template>
 

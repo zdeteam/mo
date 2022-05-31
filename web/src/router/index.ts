@@ -5,7 +5,7 @@ const routes = [
         path: '/',
         name: 'home',
         meta: {
-            title: '广场',
+            title: '鱼塘',
             keepAlive: true,
         },
         component: () => import('@/views/Home.vue'),
@@ -102,7 +102,7 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
-    document.title = `${to.meta.title} | 泡泡 - 一个清新文艺的微社区`;
+    document.title = `${to.meta.title} | 每刻都值得摸鱼`;
     next();
 });
 

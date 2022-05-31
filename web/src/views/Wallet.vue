@@ -292,7 +292,7 @@ onMounted(() => {
     }
 
     .income {
-        color: #18a058;
+        color: rgb(29,155,240);
     }
 }
 .pagination-wrap {

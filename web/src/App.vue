@@ -1,10 +1,7 @@
 <template>
-    <n-config-provider :theme="theme">
+    <n-config-provider :theme="theme" :theme-overrides="themeOverrides">
         <n-message-provider>
-            <div
-                class="app-container"
-                :class="{ dark: theme?.name === 'dark' }"
-            >
+            <div class="app-container" :class="{ dark: theme?.name === 'dark' }">
                 <div has-sider class="main-wrap" position="static">
                     <!-- 侧边栏 -->
                     <sidebar />
@@ -12,15 +9,9 @@
                     <div class="content-wrap">
                         <router-view class="app-wrap" v-slot="{ Component }">
                             <keep-alive>
-                                <component
-                                    v-if="$route.meta.keepAlive"
-                                    :is="Component"
-                                />
+                                <component v-if="$route.meta.keepAlive" :is="Component" />
                             </keep-alive>
-                            <component
-                                v-if="!$route.meta.keepAlive"
-                                :is="Component"
-                            />
+                            <component v-if="!$route.meta.keepAlive" :is="Component" />
                         </router-view>
                     </div>
 
@@ -42,6 +33,11 @@ import { darkTheme } from 'naive-ui';
 
 const store = useStore();
 const theme = computed(() => (store.state.theme === 'dark' ? darkTheme : null));
+const themeOverrides = {
+    common: {
+        primaryColor: 'rgb(29,155,240)',
+    }
+}
 </script>
 
 <style lang="less">

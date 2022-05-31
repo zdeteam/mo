@@ -150,7 +150,7 @@ const execDelAction = () => {
             margin: 10px 0 0;
 
             .show {
-                color: #18a058;
+                color: rgb(29,155,240);
                 cursor: pointer;
             }
             .hide {
