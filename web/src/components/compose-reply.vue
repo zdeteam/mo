@@ -50,11 +50,11 @@ const props = withDefaults(defineProps<{
 }>(), {
     commentId: 0,
     atUserid: 0,
-    atUsername: ""
+    atUsername: ''
 });
 const emit = defineEmits<{
-    (e: "reload"): void,
-    (e: "reset"): void
+    (e: 'reload'): void,
+    (e: 'reset'): void
 }>();
 const inputInstRef = ref<InputInst>();
 const showReply = ref(false);
@@ -100,7 +100,7 @@ defineExpose({ switchReply });
         margin: 10px 0;
 
         .show {
-            color: rgb(29,155,240);
+            color: #18a058;
             cursor: pointer;
         }
         .hide {

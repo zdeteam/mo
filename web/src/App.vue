@@ -1,5 +1,5 @@
 <template>
-    <n-config-provider :theme="theme" :theme-overrides="themeOverrides">
+    <n-config-provider :theme="theme">
         <n-message-provider>
             <div class="app-container" :class="{ dark: theme?.name === 'dark' }">
                 <div has-sider class="main-wrap" position="static">
@@ -33,11 +33,6 @@ import { darkTheme } from 'naive-ui';
 
 const store = useStore();
 const theme = computed(() => (store.state.theme === 'dark' ? darkTheme : null));
-const themeOverrides = {
-    common: {
-        primaryColor: 'rgb(29,155,240)',
-    }
-}
 </script>
 
 <style lang="less">

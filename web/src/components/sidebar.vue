@@ -105,7 +105,7 @@ import {
 } from '@vicons/ionicons5';
 import { Hash } from '@vicons/tabler';
 import { getUnreadMsgCount } from '@/api/user';
-import LOGO from '@/assets/img/logo.svg';
+import LOGO from '@/assets/img/logo.png';
 
 const store = useStore();
 const route = useRoute();
@@ -154,7 +154,7 @@ const menuOptions = computed(() => {
     return store.state.userInfo.id > 0
         ? [
               {
-                  label: '鱼塘',
+                  label: '广场',
                   key: 'home',
                   icon: () => h(HomeOutline),
                   href: '/',
@@ -189,12 +189,12 @@ const menuOptions = computed(() => {
                   icon: () => h(HeartOutline),
                   href: '/star',
               },
-            //   {
-            //       label: '钱包',
-            //       key: 'wallet',
-            //       icon: () => h(WalletOutline),
-            //       href: '/wallet',
-            //   },
+              {
+                  label: '钱包',
+                  key: 'wallet',
+                  icon: () => h(WalletOutline),
+                  href: '/wallet',
+              },
               {
                   label: '设置',
                   key: 'setting',
@@ -204,7 +204,7 @@ const menuOptions = computed(() => {
           ]
         : [
               {
-                  label: '鱼塘',
+                  label: '广场',
                   key: 'home',
                   icon: () => h(HomeOutline),
                   href: '/',
