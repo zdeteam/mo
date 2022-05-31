@@ -189,12 +189,12 @@ const menuOptions = computed(() => {
                   icon: () => h(HeartOutline),
                   href: '/star',
               },
-              {
-                  label: '钱包',
-                  key: 'wallet',
-                  icon: () => h(WalletOutline),
-                  href: '/wallet',
-              },
+            //   {
+            //       label: '钱包',
+            //       key: 'wallet',
+            //       icon: () => h(WalletOutline),
+            //       href: '/wallet',
+            //   },
               {
                   label: '设置',
                   key: 'setting',
