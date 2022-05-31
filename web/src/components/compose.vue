@@ -101,7 +101,7 @@
                             </n-button>
                         </n-upload-trigger>
 
-                        <n-upload-trigger #="{ handleClick }" abstract>
+                        <!-- <n-upload-trigger #="{ handleClick }" abstract>
                             <n-button
                                 :disabled="
                                     (fileQueue.length > 0 &&
@@ -127,7 +127,7 @@
                                     </n-icon>
                                 </template>
                             </n-button>
-                        </n-upload-trigger>
+                        </n-upload-trigger> -->
 
                         <n-button
                             quaternary
@@ -378,13 +378,13 @@ const beforeUpload = async (data: any) => {
     }
 
     // 附件类型校验
-    if (
-        uploadType.value === 'attachment' &&
-        !['application/zip'].includes(data.file.file?.type)
-    ) {
-        window.$message.warning('附件仅允许 zip 格式');
-        return false;
-    }
+    // if (
+    //     uploadType.value === 'attachment' &&
+    //     !['application/zip'].includes(data.file.file?.type)
+    // ) {
+    //     window.$message.warning('附件仅允许 zip 格式');
+    //     return false;
+    // }
 
     if (uploadType.value === 'attachment' && data.file.file?.size > 104857600) {
         window.$message.warning('附件大小不能超过100MB');
