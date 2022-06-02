@@ -11,6 +11,7 @@
                 <n-space>
                     <n-tag
                         class="tag-item"
+                        type="success"
                         round
                         v-for="tag in tags"
                         :key="tag.id"
