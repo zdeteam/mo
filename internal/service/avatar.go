@@ -59,7 +59,7 @@ var defaultAvatars = []string{
 	"https://mozde.oss-cn-hangzhou.aliyuncs.com/public/avatar/default/abigail.png",
 }
 
-func (s *Service) GetRandomAvatar() string {
+func GetRandomAvatar() string {
 	rand.Seed(time.Now().UnixMicro())
 	return defaultAvatars[rand.Intn(len(defaultAvatars))]
 }
