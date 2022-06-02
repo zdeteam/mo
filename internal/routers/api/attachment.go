@@ -112,7 +112,7 @@ func UploadAttachment(c *gin.Context) {
 		return
 	}
 
-	bucket, err := client.Bucket("paopao-assets")
+	bucket, err := client.Bucket(global.AliossSetting.AliossBucket)
 	if err != nil {
 		global.Logger.Errorf("client.Bucket err: %v", err)
 		response.ToErrorResponse(errcode.FileUploadFailed)
@@ -271,7 +271,7 @@ func DownloadAttachment(c *gin.Context) {
 		return
 	}
 
-	bucket, err := client.Bucket("paopao-assets")
+	bucket, err := client.Bucket(global.AliossSetting.AliossBucket)
 	if err != nil {
 		global.Logger.Errorf("client.Bucket err: %v", err)
 		response.ToErrorResponse(errcode.DownloadReqError)
