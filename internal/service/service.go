@@ -1,15 +1,21 @@
 package service
 
 import (
+	"github.com/rocboss/paopao-ce/global"
+	"github.com/rocboss/paopao-ce/internal/core"
 	"github.com/rocboss/paopao-ce/internal/dao"
 	"github.com/rocboss/paopao-ce/pkg/zinc"
 	"gorm.io/gorm"
 )
 
 var (
-	myDao *dao.Dao
+	ds                 core.DataService
+	attachmentChecker  core.AttachmentCheckService
+	DisablePhoneVerify bool
 )
 
 func Initialize(engine *gorm.DB, client *zinc.ZincClient) {
-	myDao = dao.New(engine, client)
+	ds = dao.NewDataService(engine, client)
+	attachmentChecker = dao.NewAttachmentCheckerService()
+	DisablePhoneVerify = !global.CfgIf("Sms")
 }

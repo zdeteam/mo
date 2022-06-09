@@ -36,7 +36,7 @@
             </n-spin>
         </n-card>
         <n-card class="copyright-wrap" embedded :bordered="false" size="small">
-            <div class="copyright">&copy; 2022 zde.today</div>
+            <div class="copyright">&copy; 2022 ZDE.TODAY</div>
             <div class="copyright">
                 <a
                     href="https://beian.miit.gov.cn/"
